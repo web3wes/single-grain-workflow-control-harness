@@ -1,0 +1,35 @@
+[
+  {
+    "request_id": "REQ-001",
+    "run_id": "RUN-1001",
+    "status": "success",
+    "validated": true,
+    "evidence_written": true,
+    "approval_recorded": true
+  },
+  {
+    "request_id": "REQ-002",
+    "run_id": "RUN-1002",
+    "status": "success",
+    "validated": true,
+    "evidence_written": true,
+    "approval_recorded": false
+  },
+  {
+    "request_id": "REQ-003",
+    "run_id": "RUN-1003",
+    "status": "failed",
+    "validated": false,
+    "evidence_written": true,
+    "approval_recorded": true
+  },
+  {
+    "request_id": "REQ-005",
+    "run_id": "RUN-1004",
+    "status": "success",
+    "validated": true,
+    "evidence_written": false,
+    "approval_recorded": true
+  }
+]
+

@@ -1,0 +1,87 @@
+{
+  "portfolio": [
+    {
+      "id": "REQ-001",
+      "name": "Client reporting narrative draft",
+      "priority_score": 11.33,
+      "production_ready": true,
+      "missing_controls": [],
+      "decision": "eligible_for_build_queue"
+    },
+    {
+      "id": "REQ-002",
+      "name": "Lead-source normalization",
+      "priority_score": 10.5,
+      "production_ready": true,
+      "missing_controls": [],
+      "decision": "eligible_for_build_queue"
+    },
+    {
+      "id": "REQ-005",
+      "name": "Meeting-action extraction and routing",
+      "priority_score": 9.2,
+      "production_ready": true,
+      "missing_controls": [],
+      "decision": "eligible_for_build_queue"
+    },
+    {
+      "id": "REQ-004",
+      "name": "Publish AI-generated client recommendations",
+      "priority_score": 2.83,
+      "production_ready": false,
+      "missing_controls": [
+        "alert_route",
+        "evidence_sink",
+        "human_approval_required_for_high_risk_action",
+        "retry_limit",
+        "validation_rule"
+      ],
+      "decision": "route_to_design_review"
+    },
+    {
+      "id": "REQ-003",
+      "name": "Automatic campaign budget changes",
+      "priority_score": 2.7,
+      "production_ready": true,
+      "missing_controls": [],
+      "decision": "eligible_for_build_queue"
+    }
+  ],
+  "run_findings": [
+    {
+      "run_id": "RUN-1001",
+      "request_id": "REQ-001",
+      "issues": [],
+      "route": "complete"
+    },
+    {
+      "run_id": "RUN-1002",
+      "request_id": "REQ-002",
+      "issues": [],
+      "route": "complete"
+    },
+    {
+      "run_id": "RUN-1003",
+      "request_id": "REQ-003",
+      "issues": [
+        "run_failed",
+        "validation_missing_or_failed"
+      ],
+      "route": "human_exception_queue"
+    },
+    {
+      "run_id": "RUN-1004",
+      "request_id": "REQ-005",
+      "issues": [
+        "evidence_not_written"
+      ],
+      "route": "human_exception_queue"
+    }
+  ],
+  "summary": {
+    "request_count": 5,
+    "production_ready_count": 4,
+    "blocked_count": 1,
+    "exception_run_count": 2
+  }
+}
